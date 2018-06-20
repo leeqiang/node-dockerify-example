@@ -47,3 +47,8 @@ npm start / npm run dev
 - supertest
 - expect
 - tman
+
+## ⚠️ 关于框架&语法糖
+理论上没有什么限制，考虑到应用的场景，建议使用中小型框架。
+
+关于语法糖, 建议使用`原生JS`或者`TypeScript`中一种。
