@@ -1,27 +1,41 @@
-NodeJS Dockerify Example
-=========================
+Koa1 事例
+========
 
-## 前提
-安装 [node-dockerify-cli](https://github.com/leeqiang/node-dockerify-cli)
+Teambition 建议的 Nodejs 项目的「目录结构」及「第三方库」使用建议.
 
-```
-npm i -g node-dockerify-cli
-```
+(`当前以koa1为例`)
 
-## 初始化 / 打包 / 发布镜像
-```
-// -p 指定端口，根据实际情况进行指定
-ndc init -a example -m "example <example@example.com>" -p 30194
+## 目录结构
+- config
+  - [services](./config/services/README.md)
+  - app.js
+  - index.js
+- server
+  - [apis](./server/apis/README.md)
+  - [blls](./server/blls/README.md)
+  - [middlewares](./server/middlewares/README.md)
+  - [schemas](./server/schemas/README.md)
+  - [services](./server/services/README.md)
+  - app.js
+  - route.js
+- [test](./test/README.md)
 
-// 打包
-ndc b -a example
+## 第三方库
+- 主框架: koa@1.2.1
+- 跨域: koa-cors@0.0.16
+- 路由: koa-router@5.4.0
+- 参数校验: ajv@latest
+- 文档: swagger-jsdoc(建议以注释的形式来做)
+- version接口: @tng/version
+- HTTP错误: http-errors@1.6.3
+- 日志: ilog
+- lodash
+- mongoose
 
-// 发布镜像到开发环境 registry(别忘记指定环境变量)
-ndc p -a example -e dev
-
-// 发布镜像到生产环境 registry(别忘记指定环境变量)
-ndc p -a example -e prod
-
-// 部署到开发环境的 k8s
-ndc d -a example
-```
+测试
+- mocha
+- chai
+- nock
+- supertest
+- expect
+- tman

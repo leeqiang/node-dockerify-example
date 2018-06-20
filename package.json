@@ -2,14 +2,18 @@
   "name": "example",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
+    "start": "node app",
+    "dev": "DEBUG=app:* node app"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "koa": "1.2.0"
+    "app-module-path": "^2.2.0",
+    "koa": "1.2.0",
+    "koa-router": "5.4.0",
+    "swagger-jsdoc": "^1.9.7"
   }
 }
