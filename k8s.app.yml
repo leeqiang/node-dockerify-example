@@ -1,0 +1,35 @@
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app: example
+  name: example
+  namespace: ng
+spec:
+  ports:
+  - nodePort: 30914
+    port: 3000
+    protocol: TCP
+  selector:
+    app: example
+  type: NodePort
+
+---
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: example
+  namespace: ng
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: example
+    spec:
+      containers:
+      - name: example
+        image: registry.teambition.corp/ng/example:COMMIT
+        ports:
+        - containerPort: 3000
+          protocol: TCP
