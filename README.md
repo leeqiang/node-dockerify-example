@@ -7,7 +7,8 @@ Teambition 建议的 Nodejs 项目的「目录结构」及「第三方库」使�
 
 ## 启动
 ```
-npm start / npm run dev
+yarn install
+npm start // 或 npm run dev
 ```
 
 - [Swagger 文档](https://petstore.swagger.io/?url=http://localhost:3000/doc)
@@ -18,6 +19,7 @@ npm start / npm run dev
   - [services](./config/services/README.md)
   - app.js
   - index.js
+- [scripts](./config/scripts/README.md)
 - server
   - [apis](./server/apis/README.md)
   - [blls](./server/blls/README.md)
