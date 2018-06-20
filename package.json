@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tng/version": "^1.2.3",
     "app-module-path": "^2.2.0",
     "koa": "1.2.0",
+    "koa-cors": "0.0.16",
     "koa-router": "5.4.0",
     "swagger-jsdoc": "^1.9.7"
   }

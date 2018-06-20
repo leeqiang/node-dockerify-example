@@ -5,6 +5,14 @@ Teambition 建议的 Nodejs 项目的「目录结构」及「第三方库」使�
 
 (`当前以koa1为例`)
 
+## 启动
+```
+npm start / npm run dev
+```
+
+- [Swagger 文档](https://petstore.swagger.io/?url=http://localhost:3000/doc)
+- [Version 接口](http://localhost:3000/version)
+
 ## 目录结构
 - config
   - [services](./config/services/README.md)
