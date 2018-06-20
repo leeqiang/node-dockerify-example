@@ -54,3 +54,13 @@ npm start // 或 npm run dev
 理论上没有什么限制，考虑到应用的场景，建议使用中小型框架。
 
 关于语法糖, 建议使用`原生JS`或者`TypeScript`中一种。
+
+## 新项目 checklist
+- [ ] 目录结构
+- [ ] docker 支持
+- [ ] version 接口
+- [ ] 测试
+- [ ] 接口文档(swagger)
+- [ ] ajv 支持
+- [ ] 日志
+- [ ] 监控
