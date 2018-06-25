@@ -1,0 +1,13 @@
+ version: '2'
+ services:
+  tbexample:
+    image: 'docker-registry.example.com/example/tbexample:latest'
+    network_mode: host
+    restart: always
+    ports:
+      - '13000:3000'
+    environment:
+      CLIENT_ID: 'i am a client_id'
+      CLIENT_SECRET: 'i am a client_secret'
+      MONGO_URL: 'mongodb://user:password@127.0.0.1/databasename?authSource=admin'
+      API_URL: 'https://www.google.com'
